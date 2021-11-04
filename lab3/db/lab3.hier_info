@@ -1,0 +1,65 @@
+|tb
+
+
+|tb|GCD:gcd
+number[0] => numbers[0].DATAIN
+number[1] => numbers[1].DATAIN
+number[2] => numbers[2].DATAIN
+number[3] => numbers[3].DATAIN
+buttons[0] => always0.IN1
+buttons[0] => always0.IN1
+buttons[1] => always0.IN1
+buttons[1] => always0.IN1
+clk => result[0]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => result[4]~reg0.CLK
+clk => result[5]~reg0.CLK
+clk => result[6]~reg0.CLK
+clk => result[7]~reg0.CLK
+clk => startCalculation.CLK
+clk => num2[0].CLK
+clk => num2[1].CLK
+clk => num2[2].CLK
+clk => num2[3].CLK
+clk => num2[4].CLK
+clk => num2[5].CLK
+clk => num2[6].CLK
+clk => num2[7].CLK
+clk => num1[0].CLK
+clk => num1[1].CLK
+clk => num1[2].CLK
+clk => num1[3].CLK
+clk => num1[4].CLK
+clk => num1[5].CLK
+clk => num1[6].CLK
+clk => num1[7].CLK
+clk => flags[0].CLK
+clk => flags[1].CLK
+clk => numbers[0].CLK
+clk => numbers[1].CLK
+clk => numbers[2].CLK
+clk => numbers[3].CLK
+clk => numbers[4].CLK
+clk => numbers[5].CLK
+clk => numbers[6].CLK
+clk => numbers[7].CLK
+clk => numbers[8].CLK
+clk => numbers[9].CLK
+clk => numbers[10].CLK
+clk => numbers[11].CLK
+clk => numbers[12].CLK
+clk => numbers[13].CLK
+clk => numbers[14].CLK
+clk => numbers[15].CLK
+result[0] <= result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

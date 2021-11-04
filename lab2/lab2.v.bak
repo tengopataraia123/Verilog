@@ -1,0 +1,10 @@
+module checker_fsm(
+	input clk,
+	input btn,
+	input [3:0] data_in,
+	output reg[7:0] data_out
+	);
+	
+	reg [1:0] state = 0;
+	
+endmodule 

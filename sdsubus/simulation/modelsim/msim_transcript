@@ -1,0 +1,456 @@
+# Reading pref.tcl
+# do sdsubus_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus {C:/Users/user/Desktop/sdsubus/master.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:38:15 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/master.v 
+# -- Compiling module master
+# 
+# Top level modules:
+# 	master
+# End time: 23:38:16 on Oct 31,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus {C:/Users/user/Desktop/sdsubus/slave.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:38:16 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 23:38:16 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.master
+# vsim work.master 
+# Start time: 23:38:22 on Oct 31,2021
+# Loading work.master
+# Loading work.slave
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'sv'.  Expected 7, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /master/sv File: C:/Users/user/Desktop/sdsubus/master.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'A_in'. The port definition is at: C:/Users/user/Desktop/sdsubus/slave.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /master/sv File: C:/Users/user/Desktop/sdsubus/master.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B_in'. The port definition is at: C:/Users/user/Desktop/sdsubus/slave.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /master/sv File: C:/Users/user/Desktop/sdsubus/master.v Line: 10
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'read_data'. The port definition is at: C:/Users/user/Desktop/sdsubus/slave.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /master/sv File: C:/Users/user/Desktop/sdsubus/master.v Line: 10
+# ** Warning: (vsim-3722) C:/Users/user/Desktop/sdsubus/master.v(10): [TFMPC] - Missing connection for port 'ready_signal'.
+add wave -position end sim:/master/*
+add wave -position end sim:/master/sv/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/master.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:39:42 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/master.v 
+# -- Compiling module master
+# 
+# Top level modules:
+# 	master
+# End time: 23:39:42 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.master
+# Warning in wave window restart: (vish-4014) No objects found matching '/master/write_data'. 
+run
+run
+run
+run
+run
+add wave -position end  sim:/master/sv/ram
+restart
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/master.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:41:49 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/master.v 
+# -- Compiling module master
+# 
+# Top level modules:
+# 	master
+# End time: 23:41:49 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.master
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:45:16 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# ** Error: (vlog-13069) C:/Users/user/Desktop/sdsubus/slave.v(50): near "endmodule": syntax error, unexpected endmodule.
+# End time: 23:45:16 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+restart
+run
+run
+run
+run
+add wave -position end sim:/master/*
+restart
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/master.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:48:36 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/master.v 
+# -- Compiling module master
+# 
+# Top level modules:
+# 	master
+# End time: 23:48:36 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.master
+run
+run
+run
+add wave -position end sim:/master/sv/*
+restart
+run
+add wave -position end  sim:/master/sv/ram[0]
+restart
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:16 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# ** Error: (vlog-13069) C:/Users/user/Desktop/sdsubus/slave.v(50): near "endmodule": syntax error, unexpected endmodule.
+# End time: 23:50:16 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+restart
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:48 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 23:50:48 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+add wave -position end  sim:/master/sv/ram[1]
+add wave -position end  sim:/master/sv/ram[2]
+add wave -position end  sim:/master/sv/ram[5]
+restart
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:56:03 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 23:56:03 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+run
+add wave -position end  sim:/master/sv/ram[0]
+run
+restart
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:58:25 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 23:58:25 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:03 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 23:59:03 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:12 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:02:12 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:06:43 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:06:43 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:07:20 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:07:20 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# ** Error: (vlog-13069) C:/Users/user/Desktop/sdsubus/slave.v(44): near "end": syntax error, unexpected end.
+# ** Error: C:/Users/user/Desktop/sdsubus/slave.v(48): (vlog-13205) Syntax error found in the scope following 'ram'. Is there a missing '::'?
+# End time: 00:09:52 on Nov 01,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+restart
+restart
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:10:31 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:10:31 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:11:33 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:11:33 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+restart
+run
+run
+restart
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/master.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:12:28 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/master.v 
+# -- Compiling module master
+# 
+# Top level modules:
+# 	master
+# End time: 00:12:28 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.master
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:15:10 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:15:10 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:16:44 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:16:44 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:18:16 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:18:16 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:20:40 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:20:40 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:21:28 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:21:28 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:22:33 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:22:33 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.slave
+run
+run
+restart
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:24:10 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:24:10 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+run
+run
+restart
+# Loading work.slave
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:24:43 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:24:43 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus C:/Users/user/Desktop/sdsubus/slave.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:25:12 on Nov 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/sdsubus" C:/Users/user/Desktop/sdsubus/slave.v 
+# -- Compiling module slave
+# 
+# Top level modules:
+# 	slave
+# End time: 00:25:12 on Nov 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 00:27:27 on Nov 01,2021, Elapsed time: 0:49:05
+# Errors: 0, Warnings: 0

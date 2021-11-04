@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/sdsubus/simulation/modelsim
+vmaster
+!s110 1635711148
+!i10b 1
+!s100 a7AG^MNkS=;in2JSQ5Mbe3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ih:S_POij0FFaIfWZMHF9i0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1635709708
+8C:/Users/user/Desktop/sdsubus/master.v
+FC:/Users/user/Desktop/sdsubus/master.v
+!i122 14
+L0 1 35
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1635711148.000000
+!s107 C:/Users/user/Desktop/sdsubus/master.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/sdsubus|C:/Users/user/Desktop/sdsubus/master.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/sdsubus
+Z6 tCvgOpt 0
+vslave
+!s110 1635711912
+!i10b 1
+!s100 >9FGAU_<O;Y2dh3ieUG^B2
+R1
+Im5G?3N7fXHlN<nb2N__Qa1
+R2
+R0
+w1635711873
+8C:/Users/user/Desktop/sdsubus/slave.v
+FC:/Users/user/Desktop/sdsubus/slave.v
+!i122 23
+L0 1 52
+R3
+r1
+!s85 0
+31
+!s108 1635711912.000000
+!s107 C:/Users/user/Desktop/sdsubus/slave.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/sdsubus|C:/Users/user/Desktop/sdsubus/slave.v|
+!i113 1
+R4
+R5
+R6

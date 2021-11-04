@@ -1,0 +1,59 @@
+# Reading pref.tcl
+# do lab3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/lab3 {C:/Users/user/Desktop/lab3/GCD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:48 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/lab3" C:/Users/user/Desktop/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 12:41:48 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/lab3 {C:/Users/user/Desktop/lab3/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:41:49 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/lab3" C:/Users/user/Desktop/lab3/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 12:41:49 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:41:55 on Oct 31,2021
+# Loading work.tb
+# Loading work.GCD
+add wave -position end sim:/tb/*
+add wave -position end sim:/tb/gcd/*
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/lab3 C:/Users/user/Desktop/lab3/tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:45:35 on Oct 31,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/lab3" C:/Users/user/Desktop/lab3/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 12:45:35 on Oct 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.tb
+run
+run
+# End time: 12:46:09 on Oct 31,2021, Elapsed time: 0:04:14
+# Errors: 0, Warnings: 0
