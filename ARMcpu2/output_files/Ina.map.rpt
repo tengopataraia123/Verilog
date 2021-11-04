@@ -1,0 +1,927 @@
+Analysis & Elaboration report for Ina
+Tue Oct 12 01:42:00 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "ControlUnit:cpu|RegFile:regFile"
+  6. Port Connectivity Checks: "ControlUnit:cpu|tdpRam:ram"
+  7. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Oct 12 01:42:00 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; Ina                                         ;
+; Top-level Entity Name         ; tb                                          ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; tb                 ; Ina                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:cpu|RegFile:regFile"                                                         ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; data_a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; we_a      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; we_b      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; we_c      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; pc[31..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:cpu|tdpRam:ram"                                                                ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; q_b[31..28] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 12 01:41:49 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ina -c Ina --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tdbram.v
+    Info (12023): Found entity 1: tdpRam File: C:/Users/user/Desktop/Verilog/Ina/tdbRam.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regfile.v
+    Info (12023): Found entity 1: RegFile File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: Alu File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb File: C:/Users/user/Desktop/Verilog/Ina/tb.v Line: 1
+Info (12127): Elaborating entity "tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb.v(7): assignments to clk create a combinational loop File: C:/Users/user/Desktop/Verilog/Ina/tb.v Line: 7
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:cpu" File: C:/Users/user/Desktop/Verilog/Ina/tb.v Line: 5
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "aluInstruction", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "addr_a", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "data1", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "data2", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "addr_b", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "we_b", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "data_b", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "addr_c", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "we_c", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "data_c", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "ramEnWrite", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "ramDataAddress", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(74): inferring latch(es) for variable "ramDataIn", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 74
+Info (10041): Inferred latch for "ramDataIn[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[4]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[5]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[6]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[7]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[8]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[9]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[10]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[11]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[12]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[13]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[14]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[15]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[16]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[17]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[18]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[19]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[20]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[21]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[22]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[23]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[24]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[25]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[26]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[27]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[28]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[29]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[30]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataIn[31]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_c[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_c[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_c[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_c[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[4]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[5]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[6]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[7]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[8]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[9]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[10]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[11]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[12]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[13]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[14]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[15]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[16]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[17]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[18]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[19]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[20]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[21]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[22]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[23]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[24]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[25]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[26]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[27]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[28]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[29]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[30]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_b[31]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "we_b" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_b[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_b[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_b[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_b[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[4]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[5]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[6]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramDataAddress[7]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "ramEnWrite" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[4]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[5]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[6]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[7]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[8]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[9]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[10]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[11]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[12]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[13]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[14]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[15]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[16]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[17]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[18]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[19]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[20]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[21]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[22]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[23]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[24]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[25]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[26]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[27]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[28]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[29]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[30]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data2[31]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[4]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[5]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[6]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[7]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[8]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[9]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[10]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[11]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[12]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[13]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[14]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[15]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[16]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[17]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[18]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[19]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[20]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[21]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[22]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[23]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[24]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[25]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[26]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[27]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[28]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[29]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[30]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data1[31]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_a[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_a[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_a[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "addr_a[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "aluInstruction[0]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "aluInstruction[1]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "aluInstruction[2]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "aluInstruction[3]" at ControlUnit.v(95) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 95
+Info (10041): Inferred latch for "data_c[0]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[1]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[2]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[3]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[4]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[5]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[6]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[7]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[8]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[9]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[10]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[11]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[12]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[13]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[14]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[15]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[16]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[17]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[18]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[19]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[20]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[21]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[22]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[23]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[24]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[25]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[26]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[27]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[28]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[29]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[30]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "data_c[31]" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (10041): Inferred latch for "we_c" at ControlUnit.v(84) File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 84
+Info (12128): Elaborating entity "tdpRam" for hierarchy "ControlUnit:cpu|tdpRam:ram" File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 54
+Info (12128): Elaborating entity "RegFile" for hierarchy "ControlUnit:cpu|RegFile:regFile" File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 63
+Info (10041): Inferred latch for "regs[0][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[0][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[1][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[2][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[3][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[4][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[5][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[6][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[7][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[8][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[9][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[10][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[11][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[12][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[13][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][0]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][1]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][2]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][3]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][4]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][5]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][6]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][7]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][8]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][9]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][10]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][11]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][12]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][13]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][14]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][15]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][16]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][17]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][18]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][19]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][20]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][21]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][22]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][23]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][24]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][25]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][26]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][27]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][28]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][29]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][30]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (10041): Inferred latch for "regs[14][31]" at regFile.v(17) File: C:/Users/user/Desktop/Verilog/Ina/regFile.v Line: 17
+Info (12128): Elaborating entity "Alu" for hierarchy "ControlUnit:cpu|Alu:alu" File: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v Line: 70
+Warning (10240): Verilog HDL Always Construct warning at alu.v(8): inferring latch(es) for variable "value", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[0]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[1]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[2]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[3]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[4]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[5]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[6]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[7]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[8]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[9]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[10]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[11]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[12]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[13]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[14]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[15]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[16]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[17]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[18]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[19]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[20]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[21]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[22]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[23]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[24]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[25]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[26]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[27]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[28]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[29]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[30]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info (10041): Inferred latch for "value[31]" at alu.v(8) File: C:/Users/user/Desktop/Verilog/Ina/alu.v Line: 8
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Tue Oct 12 01:42:00 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
+
+

@@ -1,0 +1,21 @@
+module tb();
+
+//test alu
+
+reg clk;
+
+	ControlUnit CPU(.clk(clk));
+	
+	initial begin
+	
+	clk = 1;
+	#10
+	clk = 0;
+	#10
+	clk = 1;
+	#10
+	clk = 0;
+	
+	end
+
+endmodule 

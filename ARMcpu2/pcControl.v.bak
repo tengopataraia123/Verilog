@@ -1,0 +1,14 @@
+module pcControl(
+	input clk,
+	inout reg [31:0] pcReg,
+	output reg [7:0] memoryAddressInput,
+	input [31:0] memoryDataOutput,
+	output reg [31:0] instruction);
+	
+	always @(posedge clk) begin
+		memoryAddressInput <= pcReg[7:0];
+		instruction <= memoryDataOutput;
+		pcReg <= pcReg + 1;
+	end
+	
+endmodule 

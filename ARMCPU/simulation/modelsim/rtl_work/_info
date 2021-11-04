@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/Verilog/ARMCPU/simulation/modelsim
+vRAM
+!s110 1633993394
+!i10b 1
+!s100 hTocIlaKM<>1=Wc6Z2Q_i2
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+IW`KdG]h78BR=IBEokBi_=3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1633992291
+8C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v
+FC:/Users/user/Desktop/Verilog/ARMCPU/RAM.v
+!i122 0
+L0 1 48
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1633993394.000000
+!s107 C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/ARMCPU|C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/ARMCPU
+tCvgOpt 0
+n@r@a@m

@@ -1,0 +1,48 @@
+module de0_nano_soc_baseline(
+
+
+	//////////// CLOCK //////////
+	input 		          		FPGA_CLK_50,
+	
+	//////////// KEY ////////////
+	/* 3.3-V LVTTL */
+	input				[1:0]			KEY,
+	
+	//////////// LED ////////////
+	/* 3.3-V LVTTL */
+	output reg [7:0] LED
+	
+);
+
+	wire clk;
+	assign clk = FPGA_CLK_50;
+	
+	reg flag1 = 0;  //for key[0]
+	reg flag2 = 0;  //for key[1]
+	
+	reg [2:0] state = 2'b001;   //3 state
+	
+	
+	
+	//circular shift
+	function changeState;
+	input [2:0] value;
+	begin : changestateBlcok
+		automatic reg lastDigit = value[0];
+		value = value >> 1;
+		value[2] = lastDigit;
+		changeState = value;
+	end : changeStateBlock
+	endfunction
+	
+	
+	always @(posedge clk) begin
+	
+	if(flag1 == 0 && KEY[0] == 1) begin
+		flag1 = 1;
+		state = changeState(state);
+	end
+	
+	end
+
+endmodule

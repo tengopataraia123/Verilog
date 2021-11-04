@@ -1,0 +1,31 @@
+module ControlUnit(
+	input clk
+	);
+	
+	wire [7:0] memAddressInput2;
+	wire [31:0] memOutput2;
+	
+	wire [31:0] pc;
+	
+	wire [31:0] instruction;
+	
+	tdpRam ram(
+	.clk(clk),
+	.addr_b(memAddressInput2),
+	.q_b(memOutput2)
+	);
+	
+	regFile regs(
+		.clk(clk),
+		.pc(pc),
+	);
+	
+	pcControl pccontrol(
+		.clk(clk),
+		.pcReg(pc),
+		.memoryAddressInput(memAddressInput2),
+		.memoryDataOutput(memOutput2),
+		.instruction(instruction)
+		);
+	
+endmodule 

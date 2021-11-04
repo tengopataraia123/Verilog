@@ -1,0 +1,53 @@
+# Reading pref.tcl
+# do Counter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Lab#1 {C:/Users/user/Desktop/Verilog/Lab#1/de0_nano_soc_baseline.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:29:02 on Oct 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Lab#1" C:/Users/user/Desktop/Verilog/Lab#1/de0_nano_soc_baseline.v 
+# -- Compiling module de0_nano_soc_baseline
+# 
+# Top level modules:
+# 	de0_nano_soc_baseline
+# End time: 15:29:02 on Oct 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Lab#1 {C:/Users/user/Desktop/Verilog/Lab#1/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:29:02 on Oct 09,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Lab#1" C:/Users/user/Desktop/Verilog/Lab#1/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 15:29:02 on Oct 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:29:05 on Oct 09,2021
+# Loading work.tb
+# Loading work.de0_nano_soc_baseline
+add wave -position end  sim:/tb/clk
+add wave -position end  sim:/tb/keys
+add wave -position end  sim:/tb/leds
+add wave -position insertpoint  \
+sim:/tb/counter/stage
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:30:29 on Oct 09,2021, Elapsed time: 0:01:24
+# Errors: 0, Warnings: 0

@@ -1,0 +1,730 @@
+# Reading pref.tcl
+# do Ina_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina {C:/Users/user/Desktop/Verilog/Ina/tdbRam.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:09 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/tdbRam.v 
+# -- Compiling module tdpRam
+# 
+# Top level modules:
+# 	tdpRam
+# End time: 01:42:09 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina {C:/Users/user/Desktop/Verilog/Ina/regFile.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:09 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/regFile.v 
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# End time: 01:42:09 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina {C:/Users/user/Desktop/Verilog/Ina/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:10 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/alu.v 
+# -- Compiling module Alu
+# 
+# Top level modules:
+# 	Alu
+# End time: 01:42:10 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina {C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:10 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:42:10 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina {C:/Users/user/Desktop/Verilog/Ina/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:10 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 01:42:10 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 01:42:13 on Oct 12,2021
+# Loading work.tb
+# Loading work.ControlUnit
+# Loading work.tdpRam
+# Loading work.RegFile
+# Loading work.Alu
+add wave -position end sim:/tb/cpu/*
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 10 ps ###############
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data1)#67 @ sub-iteration 0
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+#   Active process: /tb/cpu/alu/#IMPLICIT-WIRE(value)#65 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:65
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_c)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_b)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_a)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data_b)#58 @ sub-iteration 2
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data1)#67 @ sub-iteration 2
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:32 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:42:32 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:42:45 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:42:45 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:43:00 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:43:00 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:44:09 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:44:09 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+# A time value could not be extracted from the current line
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:46:43 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:46:43 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:03 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:47:03 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:19 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:47:19 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:28 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:47:28 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:40 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:47:40 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:52 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:47:52 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:49:12 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:49:12 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:50:23 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:50:23 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+run
+add wave -position end  sim:/tb/cpu/regFile/regs
+restart
+run
+add wave -position end sim:/tb/cpu/regFile/*
+restart
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:59 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:53:59 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+vsim work.ControlUnit
+# End time: 01:54:03 on Oct 12,2021, Elapsed time: 0:11:50
+# Errors: 0, Warnings: 0
+# vsim work.ControlUnit 
+# Start time: 01:54:03 on Oct 12,2021
+# Loading work.ControlUnit
+# Loading work.tdpRam
+# Loading work.RegFile
+# Loading work.Alu
+add wave -position end sim:/ControlUnit/*
+run
+run
+run
+run
+run
+run
+vsim work.tb
+# End time: 01:54:20 on Oct 12,2021, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0
+# vsim work.tb 
+# Start time: 01:54:20 on Oct 12,2021
+# Loading work.tb
+# Loading work.ControlUnit
+# Loading work.tdpRam
+# Loading work.RegFile
+# Loading work.Alu
+vsim work.tb
+# End time: 01:54:23 on Oct 12,2021, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# vsim work.tb 
+# Start time: 01:54:23 on Oct 12,2021
+# Loading work.tb
+# Loading work.ControlUnit
+# Loading work.tdpRam
+# Loading work.RegFile
+# Loading work.Alu
+add wave -position end sim:/tb/cpu/*
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:57:28 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:57:28 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:57:59 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:57:59 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 10 ps ###############
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data1)#67 @ sub-iteration 0
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_c)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_b)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/regFile/#IMPLICIT-WIRE(q_a)#56 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:56
+#   Active process: /tb/cpu/alu/#IMPLICIT-WIRE(value)#65 @ sub-iteration 1
+#     Source: C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v:65
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data_b)#58 @ sub-iteration 2
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+#   Active process: /tb/cpu/#IMPLICIT-WIRE(data1)#67 @ sub-iteration 3
+#     Source: C:/Users/user/Desktop/Verilog/Ina/tb.v:5
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:58:35 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:58:35 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:59:53 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 01:59:53 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:02:18 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:02:18 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 10 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:04:54 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# ** Error: (vlog-13069) C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v(163): near "endmodule": syntax error, unexpected endmodule.
+# End time: 02:04:54 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+restart
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:05:33 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:05:33 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:07:07 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:07:07 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:07:56 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:07:56 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:08:14 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:08:14 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:11:56 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:11:56 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:12:18 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:12:18 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:17 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:15:17 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:16:30 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:16:30 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:16:42 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:16:42 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:17:03 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:17:03 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:18:06 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:18:06 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:18:45 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:18:45 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run
+restart
+# Loading work.ControlUnit
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 30 ps.
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:19:34 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:19:34 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.ControlUnit
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:21:07 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:21:07 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:22:41 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:22:41 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:27:07 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:27:08 on Oct 12,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+run
+run
+add wave -position end  sim:/tb/cpu/regFile/regs
+restart
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/Ina C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:28:34 on Oct 12,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/Ina" C:/Users/user/Desktop/Verilog/Ina/ControlUnit.v 
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# End time: 02:28:34 on Oct 12,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.ControlUnit
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 02:28:40 on Oct 12,2021, Elapsed time: 0:34:17
+# Errors: 0, Warnings: 0

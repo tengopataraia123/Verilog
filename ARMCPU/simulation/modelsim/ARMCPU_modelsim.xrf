@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v
+source_file = 1, C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v
+source_file = 1, C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v
+source_file = 1, C:/Users/user/Desktop/Verilog/ARMCPU/tb.v
+source_file = 1, C:/Users/user/Desktop/Verilog/ARMCPU/db/ARMCPU.cbx.xml
+design_name = ControlUnit
+instance = comp, \clk~input , clk~input, ControlUnit, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, ControlUnit, 1

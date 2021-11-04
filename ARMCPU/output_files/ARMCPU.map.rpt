@@ -1,0 +1,932 @@
+Analysis & Synthesis report for ARMCPU
+Tue Oct 12 13:17:20 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "RAM:ram"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct 12 13:17:20 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ARMCPU                                      ;
+; Top-level Entity Name           ; ControlUnit                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 1                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; ControlUnit        ; ARMCPU             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; RAM.v                            ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v         ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v         ;         ;
+; ControlUnit.v                    ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |ControlUnit               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 1    ; 0            ; |ControlUnit        ; ControlUnit ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RAM:ram"                                                                                                                                              ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                        ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr_b      ; Input  ; Warning  ; Input port expression (6 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "addr_b[7..6]" will be connected to GND. ;
+; q_b[31..28] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
+; data_b      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.   ;
+; we_b        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.   ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 1                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 12 13:17:08 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ARMCPU -c ARMCPU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM File: C:/Users/user/Desktop/Verilog/ARMCPU/RAM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: tb File: C:/Users/user/Desktop/Verilog/ARMCPU/tb.v Line: 1
+Info (12127): Elaborating entity "ControlUnit" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at ControlUnit.v(90): truncated value with size 32 to match size of target (8) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 90
+Warning (10230): Verilog HDL assignment warning at ControlUnit.v(94): truncated value with size 32 to match size of target (8) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 94
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(75): inferring latch(es) for variable "data1", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(75): inferring latch(es) for variable "data2", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(75): inferring latch(es) for variable "addrForRam", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at ControlUnit.v(75): inferring latch(es) for variable "dataForRam", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "dataForRam[31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "addrForRam[7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[0][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[1][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[2][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[3][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[4][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[5][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[6][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[7][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[8][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[9][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[10][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[11][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[12][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[13][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "regs[14][31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data2[31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[0]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[1]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[2]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[3]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[4]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[5]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[6]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[7]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[8]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[9]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[10]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[11]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[12]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[13]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[14]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[15]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[16]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[17]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[18]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[19]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[20]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[21]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[22]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[23]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[24]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[25]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[26]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[27]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[28]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[29]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[30]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (10041): Inferred latch for "data1[31]" at ControlUnit.v(75) File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 75
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram" File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 54
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 62
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(10): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[0]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[1]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[2]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[3]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[4]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[5]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[6]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[7]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[8]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[9]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[10]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[11]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[12]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[13]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[14]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[15]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[16]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[17]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[18]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[19]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[20]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[21]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[22]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[23]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[24]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[25]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[26]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[27]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[28]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[29]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[30]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Info (10041): Inferred latch for "result[31]" at ALU.v(10) File: C:/Users/user/Desktop/Verilog/ARMCPU/ALU.v Line: 10
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/user/Desktop/Verilog/ARMCPU/output_files/ARMCPU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/user/Desktop/Verilog/ARMCPU/ControlUnit.v Line: 3
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Tue Oct 12 13:17:20 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/user/Desktop/Verilog/ARMCPU/output_files/ARMCPU.map.smsg.
+
+

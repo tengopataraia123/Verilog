@@ -1,0 +1,44 @@
+module ControlUnit(
+	input clk
+	);
+	reg [31:0] regs[15:0];
+	
+	alias regs[15][31:0] = PC;
+//	alias LR = regs[14];
+	
+	//devide memory
+//	SP = 128;
+	
+	//for ram
+	reg [31:0] instruction;  //strores next instruction
+	wire [31:0] dataForRam; 	//stores data to be writeen in ram
+	wire [31:0] dataFromRam; //stores data read from ram
+	wire we_a;					//enable writing mode in ram
+	
+	//for alu
+	wire [31:0] data1;
+	wire [31:0] data2;
+	wire [3:0] cmd;
+	wire [31:0] result;
+	
+	
+	true_dpram_sclk ram(
+	.data_a(dataForRam),
+//	.addr_b(PC[5:0]),
+	.we_a(we_a),
+	.clk(clk),
+	.q_a(dataFromRam), 
+	.q_b(instruction)
+	);
+	
+	ALU alu(
+	.clk(clk),
+	.data1(data1),
+	.data2(data2),
+	.cmd(cmd),
+	.result(result)
+	);
+	
+	
+	
+endmodule 

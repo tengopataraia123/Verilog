@@ -1,0 +1,22 @@
+module ALU(
+	input clk,
+	input [31:0] data1,
+	input [31:0] data2,
+	input [3:0] cmd,
+	output reg [31:0] result
+);
+
+always @(posedge clk) begin
+	begin
+		if(cmd == 2'b0100) //add
+		begin
+			result <= data1 + data2;
+		end
+		else if(cmd == 2'b0010) //sub
+		begin
+			result <= data1 - data2;
+		end
+	end
+end
+	
+endmodule 
