@@ -1,0 +1,22 @@
+module uart(
+	input clk,
+	input startTransmit,
+	input [10:0] data,
+	output reg tx);
+	
+	always@(posedge uart_clock) begin
+		if(startTransmit) begin
+			if(transmitIndex == 10) begin
+				startTransmit <= 0;
+				transmitIndex <= 0;
+				tx <= 1'b1;
+			end
+			else begin
+				tx <= uart_packet[10];
+				uart_packet <= uart_packet << 1;
+				transmitIndex <= transmitIndex + 1;
+			end
+		end
+	end
+	
+endmodule 

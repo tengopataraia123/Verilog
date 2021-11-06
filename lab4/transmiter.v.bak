@@ -1,0 +1,5 @@
+module transmiter(
+	input clk,btn,
+	output tx);
+	
+endmodule 

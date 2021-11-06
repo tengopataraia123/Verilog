@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at transmiter.v(17): always construct contains both blocking and non-blocking assignments File: C:/Users/user/Desktop/Verilog/lab4/transmiter.v Line: 17
+Warning (10268): Verilog HDL information at receiver.v(15): always construct contains both blocking and non-blocking assignments File: C:/Users/user/Desktop/Verilog/lab4/receiver.v Line: 15

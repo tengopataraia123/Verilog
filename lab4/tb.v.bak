@@ -1,0 +1,19 @@
+module tb;
+
+	reg clk  =0;
+	reg uart_clock = 0;
+	
+	wire leds[7:0];
+	
+	reg btn[1:0] = 2'b11;
+	reg sw[3:0] = 0;
+	
+	always@() #20 clk <= ~clk;
+	
+	transmiter tr(
+	
+	always@(posedge clk) begin
+	
+	end
+
+endmodule 

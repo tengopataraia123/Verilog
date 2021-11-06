@@ -49,14 +49,14 @@ module GCD(
 		begin
 			
 			if(a[7] == 1'b1) begin
-				c <= a*2+1;
+				c <= ~a+1;
 			end
 			else begin
 				c <= a;
 			end
 			
 			if(b[7] == 1'b1) begin
-				d <= d*2+1;
+				d <= ~b+1;
 			end
 			else begin
 				d <= b;

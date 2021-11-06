@@ -1,0 +1,6 @@
+module receiver(
+	input rx,clk,
+	output reg leds[7:0]
+	);
+	
+endmodule 

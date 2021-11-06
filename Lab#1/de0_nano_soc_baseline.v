@@ -2,7 +2,7 @@ module de0_nano_soc_baseline(
 
 
 	//////////// CLOCK //////////
-	input 		          		FPGA_CLK_50,
+	input 		          		CLOCK_50,
 	
 	//////////// KEY ////////////
 	/* 3.3-V LVTTL */
@@ -15,7 +15,7 @@ module de0_nano_soc_baseline(
 );
 
 	wire clk;
-	assign clk = FPGA_CLK_50;
+	assign clk = CLOCK_50;
 	
 	reg flag1 = 0;  //for key[0]
 	reg flag2 = 0;  //for key[1]
@@ -75,8 +75,7 @@ module de0_nano_soc_baseline(
 	always @(posedge clk) begin
 		case(stage)
 		3'b001 : begin
-		LED[1] <= 0;
-		LED[0] <= 1;
+		LED <= 1;
 		end
 		3'b010 : begin 
 		LED[1] <= 1;
