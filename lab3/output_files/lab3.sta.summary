@@ -2,52 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -16.820
-TNS   : -315.608
-
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.415
+Type  : Slow 1100mV 85C Model Setup 'actual_clock'
+Slack : 4.520
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.394
-TNS   : -27.877
-
-Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -17.561
-TNS   : -326.352
-
-Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.413
+Type  : Slow 1100mV 85C Model Hold 'actual_clock'
+Slack : 0.265
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.394
-TNS   : -24.538
-
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -8.684
-TNS   : -160.345
-
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.224
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'actual_clock'
+Slack : 9.231
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.424
-TNS   : -20.286
-
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -7.962
-TNS   : -145.260
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.209
+Type  : Slow 1100mV 0C Model Setup 'actual_clock'
+Slack : 4.207
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.460
-TNS   : -23.987
+Type  : Slow 1100mV 0C Model Hold 'actual_clock'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'actual_clock'
+Slack : 9.299
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'actual_clock'
+Slack : 11.648
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'actual_clock'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'actual_clock'
+Slack : 9.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'actual_clock'
+Slack : 12.128
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'actual_clock'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'actual_clock'
+Slack : 9.068
+TNS   : 0.000
 
 ------------------------------------------------------------

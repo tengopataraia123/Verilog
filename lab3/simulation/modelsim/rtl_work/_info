@@ -8,53 +8,53 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/user/Desktop/lab3/simulation/modelsim
-vGCD
-!s110 1635669708
+Z0 dC:/Users/user/Desktop/Verilog/lab3/simulation/modelsim
+vde0_nano_soc_baseline
+!s110 1636186640
 !i10b 1
-!s100 2B9g9>3zVEiV0VGkX7J2;1
+!s100 F5=LRQh>OoYW]R@OCS5GH3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I6_l_eMaccD1d8QNYG[Rj83
+IehAEz?0ac[aH<Z:8ckfnQ0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1635588636
-8C:/Users/user/Desktop/lab3/GCD.v
-FC:/Users/user/Desktop/lab3/GCD.v
+w1635580335
+8C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v
+FC:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v
 !i122 0
-L0 1 83
+L0 40 111
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1635669708.000000
-!s107 C:/Users/user/Desktop/lab3/GCD.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/lab3|C:/Users/user/Desktop/lab3/GCD.v|
+!s108 1636186638.000000
+!s107 C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v|
 !i113 1
 Z4 o-vlog01compat -work work
-Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/lab3
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3
 Z6 tCvgOpt 0
-n@g@c@d
-vtb
-!s110 1635669935
+vGCD
+!s110 1636186641
 !i10b 1
-!s100 >]5Cz8LeVJM@>9Z<TekKz2
+!s100 efK29<Ed9:9oe[AI;XQm=3
 R1
-I5b?48BBziLnCHZkQHOWTQ0
+Ida=JhHUY03BF=fFUa;EzK1
 R2
 R0
-w1635669924
-8C:/Users/user/Desktop/lab3/tb.v
-FC:/Users/user/Desktop/lab3/tb.v
-!i122 2
-L0 1 42
+w1636186268
+8C:/Users/user/Desktop/Verilog/lab3/GCD.v
+FC:/Users/user/Desktop/Verilog/lab3/GCD.v
+!i122 1
+L0 1 74
 R3
 r1
 !s85 0
 31
-!s108 1635669935.000000
-!s107 C:/Users/user/Desktop/lab3/tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/lab3|C:/Users/user/Desktop/lab3/tb.v|
+!s108 1636186640.000000
+!s107 C:/Users/user/Desktop/Verilog/lab3/GCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/GCD.v|
 !i113 1
 R4
 R5
 R6
+n@g@c@d
