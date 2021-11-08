@@ -1,32 +1,17 @@
-|de0_nano_soc_baseline
-CLOCK_50 => CLOCK_50.IN1
-FPGA_CLK2_50 => ~NO_FANOUT~
-FPGA_CLK3_50 => ~NO_FANOUT~
-KEY[0] => KEY[0].IN1
-KEY[1] => KEY[1].IN1
-LED[0] << GCD:gcd.port3
-LED[1] << GCD:gcd.port3
-LED[2] << GCD:gcd.port3
-LED[3] << GCD:gcd.port3
-LED[4] << GCD:gcd.port3
-LED[5] << GCD:gcd.port3
-LED[6] << GCD:gcd.port3
-LED[7] << GCD:gcd.port3
-SW[0] => SW[0].IN1
-SW[1] => SW[1].IN1
-SW[2] => SW[2].IN1
-SW[3] => SW[3].IN1
+|tb
 
 
-|de0_nano_soc_baseline|GCD:gcd
+|tb|GCD:gcd
 number[0] => numbers[0].DATAIN
 number[1] => numbers[1].DATAIN
 number[2] => numbers[2].DATAIN
 number[3] => numbers[3].DATAIN
 buttons[0] => always0.IN1
 buttons[0] => oldButtons[0].DATAIN
+buttons[0] => always0.IN1
 buttons[1] => always0.IN1
 buttons[1] => oldButtons[1].DATAIN
+buttons[1] => always0.IN1
 clk => result[0]~reg0.CLK
 clk => result[1]~reg0.CLK
 clk => result[2]~reg0.CLK
@@ -43,6 +28,23 @@ clk => reminder[4].CLK
 clk => reminder[5].CLK
 clk => reminder[6].CLK
 clk => reminder[7].CLK
+clk => assignFlag.CLK
+clk => finalNum2[0].CLK
+clk => finalNum2[1].CLK
+clk => finalNum2[2].CLK
+clk => finalNum2[3].CLK
+clk => finalNum2[4].CLK
+clk => finalNum2[5].CLK
+clk => finalNum2[6].CLK
+clk => finalNum2[7].CLK
+clk => finalNum1[0].CLK
+clk => finalNum1[1].CLK
+clk => finalNum1[2].CLK
+clk => finalNum1[3].CLK
+clk => finalNum1[4].CLK
+clk => finalNum1[5].CLK
+clk => finalNum1[6].CLK
+clk => finalNum1[7].CLK
 clk => startCalculation.CLK
 clk => num2[0].CLK
 clk => num2[1].CLK

@@ -9,52 +9,52 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/user/Desktop/Verilog/lab3/simulation/modelsim
-vde0_nano_soc_baseline
-!s110 1636186640
+vGCD
+!s110 1636228472
 !i10b 1
-!s100 F5=LRQh>OoYW]R@OCS5GH3
+!s100 Lfzjb2WCJWkikgEdaVHCT3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IehAEz?0ac[aH<Z:8ckfnQ0
+I1@BQizaBX^2FV=D2GRaHk1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1635580335
-8C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v
-FC:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v
-!i122 0
-L0 40 111
+w1636228468
+8C:/Users/user/Desktop/Verilog/lab3/GCD.v
+FC:/Users/user/Desktop/Verilog/lab3/GCD.v
+!i122 10
+L0 1 79
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1636186638.000000
-!s107 C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v|
+!s108 1636228472.000000
+!s107 C:/Users/user/Desktop/Verilog/lab3/GCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/GCD.v|
 !i113 1
 Z4 o-vlog01compat -work work
 Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3
 Z6 tCvgOpt 0
-vGCD
-!s110 1636186641
+n@g@c@d
+vtb
+!s110 1636227857
 !i10b 1
-!s100 efK29<Ed9:9oe[AI;XQm=3
+!s100 ld0l0]lWNabXl7l^LeF]52
 R1
-Ida=JhHUY03BF=fFUa;EzK1
+IIOAT6HT6JZoQ:U_GMUf4m1
 R2
 R0
-w1636186268
-8C:/Users/user/Desktop/Verilog/lab3/GCD.v
-FC:/Users/user/Desktop/Verilog/lab3/GCD.v
+w1636220839
+8C:/Users/user/Desktop/Verilog/lab3/tb.v
+FC:/Users/user/Desktop/Verilog/lab3/tb.v
 !i122 1
-L0 1 74
+L0 1 42
 R3
 r1
 !s85 0
 31
-!s108 1636186640.000000
-!s107 C:/Users/user/Desktop/Verilog/lab3/GCD.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/GCD.v|
+!s108 1636227857.000000
+!s107 C:/Users/user/Desktop/Verilog/lab3/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab3|C:/Users/user/Desktop/Verilog/lab3/tb.v|
 !i113 1
 R4
 R5
 R6
-n@g@c@d

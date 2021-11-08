@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/Verilog/zero_zoncatenator/simulation/modelsim
+vconcatenator
+!s110 1636392512
+!i10b 1
+!s100 Z5jjKd:DEa6D02mJRH]Ti2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IccAWN@NoCTmaWC>ZX`1WJ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1636391603
+8C:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v
+FC:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v
+!i122 0
+L0 1 36
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1636392512.000000
+!s107 C:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator|C:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator
+Z6 tCvgOpt 0
+vtb
+!s110 1636392513
+!i10b 1
+!s100 ^OYi[kl4o>V4R^HmYa2QF0
+R1
+IFof3MmaabkoTJ7A7Y^hbc1
+R2
+R0
+w1636391678
+8C:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v
+FC:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v
+!i122 1
+L0 1 19
+R3
+r1
+!s85 0
+31
+!s108 1636392513.000000
+!s107 C:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator|C:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v|
+!i113 1
+R4
+R5
+R6

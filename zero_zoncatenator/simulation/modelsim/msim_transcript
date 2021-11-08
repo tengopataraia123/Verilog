@@ -1,0 +1,47 @@
+# Reading pref.tcl
+# do zero_concatenator_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator {C:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:28:32 on Nov 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator" C:/Users/user/Desktop/Verilog/zero_zoncatenator/concatenator.v 
+# -- Compiling module concatenator
+# 
+# Top level modules:
+# 	concatenator
+# End time: 21:28:32 on Nov 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator {C:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:28:33 on Nov 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/zero_zoncatenator" C:/Users/user/Desktop/Verilog/zero_zoncatenator/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:28:33 on Nov 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 21:28:41 on Nov 08,2021
+# Loading work.tb
+# Loading work.concatenator
+add wave -position end sim:/tb/*
+run
+run
+run
+run
+run
+run
+# End time: 21:29:19 on Nov 08,2021, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0

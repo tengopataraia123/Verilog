@@ -1,0 +1,6 @@
+module concatenator(
+	input [23:0] imm_in,
+	input [1:0] op_in,
+	output [31:0] immediate_out);
+	
+endmodule 

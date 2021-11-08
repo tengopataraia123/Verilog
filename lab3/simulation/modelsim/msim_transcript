@@ -7,27 +7,206 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 {C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:17:18 on Nov 06,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/de0_nano_soc_baseline.v 
-# -- Compiling module de0_nano_soc_baseline
-# 
-# Top level modules:
-# 	de0_nano_soc_baseline
-# End time: 12:17:20 on Nov 06,2021, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 {C:/Users/user/Desktop/Verilog/lab3/GCD.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:17:20 on Nov 06,2021
+# Start time: 23:44:16 on Nov 06,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
 # -- Compiling module GCD
 # 
 # Top level modules:
 # 	GCD
-# End time: 12:17:21 on Nov 06,2021, Elapsed time: 0:00:01
+# End time: 23:44:16 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 {C:/Users/user/Desktop/Verilog/lab3/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:44:17 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 23:44:17 on Nov 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
+vsim work.tb
+# vsim work.tb 
+# Start time: 23:44:23 on Nov 06,2021
+# Loading work.tb
+# Loading work.GCD
+add wave -position end sim:/tb/*
+add wave -position end sim:/tb/gcd/*
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:45:03 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:45:03 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:45:43 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:45:43 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:46:08 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:46:08 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:47:07 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:47:08 on Nov 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:47:20 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:47:21 on Nov 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:47:37 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:47:37 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:48:09 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:48:09 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:50:45 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:50:45 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab3 C:/Users/user/Desktop/Verilog/lab3/GCD.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:54:32 on Nov 06,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab3" C:/Users/user/Desktop/Verilog/lab3/GCD.v 
+# -- Compiling module GCD
+# 
+# Top level modules:
+# 	GCD
+# End time: 23:54:32 on Nov 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.GCD
+run
+run
+run
+run
+# End time: 23:54:54 on Nov 06,2021, Elapsed time: 0:10:31
+# Errors: 0, Warnings: 0
