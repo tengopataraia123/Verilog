@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/Verilog/alu/simulation/modelsim
+valu
+!s110 1636728108
+!i10b 1
+!s100 Y]lLXbc`aJmhA:03df=Ao0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IED79lF8iaR=B_nJfQ@52:1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1636722889
+8C:/Users/user/Desktop/Verilog/alu/alu.v
+FC:/Users/user/Desktop/Verilog/alu/alu.v
+!i122 0
+L0 1 74
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1636728108.000000
+!s107 C:/Users/user/Desktop/Verilog/alu/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/alu|C:/Users/user/Desktop/Verilog/alu/alu.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/alu
+Z6 tCvgOpt 0
+vtb
+!s110 1636728404
+!i10b 1
+!s100 QPF;YP33bb4V[_dUYlAXZ0
+R1
+IcRQ2@C7YZba^bAMQZPa]>0
+R2
+R0
+w1636728399
+8C:/Users/user/Desktop/Verilog/alu/tb.v
+FC:/Users/user/Desktop/Verilog/alu/tb.v
+!i122 2
+L0 1 27
+R3
+r1
+!s85 0
+31
+!s108 1636728404.000000
+!s107 C:/Users/user/Desktop/Verilog/alu/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/alu|C:/Users/user/Desktop/Verilog/alu/tb.v|
+!i113 1
+R4
+R5
+R6
