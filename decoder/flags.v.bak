@@ -1,0 +1,9 @@
+module flags (
+    input clk,
+    input s_in,
+    input [3:0] flagsfromALU,
+    output reg [3:0] NZCV
+);
+
+
+endmodule 

@@ -9,7 +9,7 @@ module regfile(
 	output[31:0] rDr15
 	);
 	
-	reg [15:0] refile [31:0];
+	reg [31:0] refile [15:0];
 	
 	assign rD1 = refile[rA1];
 	assign rD2 = refile[rA2];

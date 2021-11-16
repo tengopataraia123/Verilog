@@ -1,0 +1,24 @@
+module decoder (
+    input [31:0] instr_in,
+    output [3:0] cond,
+    output [1:0] op,
+    output [5:0] nIPUBWL,
+    output imm,
+    output [1:0] bimm, //branch immediate
+    output [3:0] cmd,
+    output s,
+    output [3:0] Rn,
+    output [3:0] Rd,
+    output [3:0] Rs,
+    output [3:0] Rm,
+    output [11:0] imm12,
+    output [7:0] imm8,
+    output [23:0] imm24,
+    output [1:0] sh,
+    output [4:0] shamt5,
+    output [3:0] rot,
+    output bit4,
+    output bit7
+    );
+	 
+endmodule 

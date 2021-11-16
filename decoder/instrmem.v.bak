@@ -1,0 +1,6 @@
+module instrmem (
+    input [31:0] instr_addr,
+    output [31:0] instruction
+);
+
+endmodule 

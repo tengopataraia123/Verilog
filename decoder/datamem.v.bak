@@ -1,0 +1,9 @@
+module datamem (
+    input clk,
+    input        dmWEn,
+    input [31:0] dmRWAddr,
+    input [31:0] dmWData,
+    output [31:0] dmRData
+);
+
+endmodule 
