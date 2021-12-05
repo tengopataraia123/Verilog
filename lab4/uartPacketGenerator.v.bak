@@ -1,0 +1,14 @@
+module dataGenerator(
+	input clk,
+	input btn[1:0],
+	input sw[3:0],
+	input transmitFinished,
+	output reg startTransmit,
+	output reg uart_packet[10:0]);
+	
+	
+	
+	
+	
+
+endmodule 

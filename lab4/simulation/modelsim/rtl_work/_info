@@ -1,0 +1,132 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/Verilog/lab4/simulation/modelsim
+vreceiver
+!s110 1638715588
+!i10b 1
+!s100 8c4?<d64;gAd0P00@2TGJ0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I3[CSAz1^=ijHC5iZ?0;653
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1638715580
+8C:/Users/user/Desktop/Verilog/lab4/receiver.v
+FC:/Users/user/Desktop/Verilog/lab4/receiver.v
+!i122 17
+L0 1 50
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1638715588.000000
+!s107 C:/Users/user/Desktop/Verilog/lab4/receiver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab4|C:/Users/user/Desktop/Verilog/lab4/receiver.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4
+Z6 tCvgOpt 0
+vtb
+Z7 !s110 1638713172
+!i10b 1
+!s100 j4]07]AXiD>jEVaY>e;<a1
+R1
+ILAOoPeL?AjFIB]iJ=Z_>I0
+R2
+R0
+w1638708935
+8C:/Users/user/Desktop/Verilog/lab4/tb.v
+FC:/Users/user/Desktop/Verilog/lab4/tb.v
+!i122 3
+L0 1 43
+R3
+r1
+!s85 0
+31
+Z8 !s108 1638713172.000000
+!s107 C:/Users/user/Desktop/Verilog/lab4/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab4|C:/Users/user/Desktop/Verilog/lab4/tb.v|
+!i113 1
+R4
+R5
+R6
+vtransmiter
+!s110 1638715188
+!i10b 1
+!s100 ZGAi<`7@`]:Yz>@4TPRj43
+R1
+IN0OfK_Cf@A`Wn3;B>:T>82
+R2
+R0
+w1638715182
+8C:/Users/user/Desktop/Verilog/lab4/transmiter.v
+FC:/Users/user/Desktop/Verilog/lab4/transmiter.v
+!i122 16
+L0 1 39
+R3
+r1
+!s85 0
+31
+!s108 1638715188.000000
+!s107 C:/Users/user/Desktop/Verilog/lab4/transmiter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab4|C:/Users/user/Desktop/Verilog/lab4/transmiter.v|
+!i113 1
+R4
+R5
+R6
+vuartclk
+R7
+!i10b 1
+!s100 GNeZAAfcOczDd8c`7ol=S3
+R1
+IP1h1iYVmoJOLCfaB:N=Z_1
+R2
+R0
+w1638708032
+8C:/Users/user/Desktop/Verilog/lab4/uartclk.v
+FC:/Users/user/Desktop/Verilog/lab4/uartclk.v
+!i122 2
+L0 1 16
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/user/Desktop/Verilog/lab4/uartclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab4|C:/Users/user/Desktop/Verilog/lab4/uartclk.v|
+!i113 1
+R4
+R5
+R6
+vuartPacketGenerator
+!s110 1638715122
+!i10b 1
+!s100 SjGHobODYL6V^8@8ge5D53
+R1
+IEVPhm5[kM@V^^05T=`Tb61
+R2
+R0
+w1638715118
+8C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+FC:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+!i122 15
+L0 1 65
+R3
+r1
+!s85 0
+31
+!s108 1638715122.000000
+!s107 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Verilog/lab4|C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v|
+!i113 1
+R4
+R5
+R6
+nuart@packet@generator

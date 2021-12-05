@@ -1,6 +1,6 @@
 Analysis & Elaboration report for lab4
-Sat Nov 06 14:21:04 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+Sun Dec 05 18:04:36 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,8 +10,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  5. Port Connectivity Checks: "uartPacketGenerator:gen"
+  6. Port Connectivity Checks: "receiver:rr"
+  7. Analysis & Elaboration Messages
+  8. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -35,22 +37,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                            ;
-+-------------------------------+-----------------------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Sat Nov 06 14:21:04 2021                         ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
-; Revision Name                 ; lab4                                                      ;
-; Top-level Entity Name         ; tb                                                        ;
-; Family                        ; Cyclone V                                                 ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                                 ;
-; Total registers               ; N/A until Partition Merge                                 ;
-; Total pins                    ; N/A until Partition Merge                                 ;
-; Total virtual pins            ; N/A until Partition Merge                                 ;
-; Total block memory bits       ; N/A until Partition Merge                                 ;
-; Total PLLs                    ; N/A until Partition Merge                                 ;
-; Total DLLs                    ; N/A until Partition Merge                                 ;
-+-------------------------------+-----------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun Dec 05 18:04:36 2021       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; lab4                                        ;
+; Top-level Entity Name         ; tb                                          ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -58,8 +60,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -156,17 +158,37 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-----------------------------------------------------+
+; Port Connectivity Checks: "uartPacketGenerator:gen" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; btn      ; Input ; Info     ; Stuck at VCC          ;
+; sw[1..0] ; Input ; Info     ; Stuck at GND          ;
+; sw[3]    ; Input ; Info     ; Stuck at GND          ;
+; sw[2]    ; Input ; Info     ; Stuck at VCC          ;
++----------+-------+----------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "receiver:rr"                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; leds ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sat Nov 06 14:20:30 2021
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec 05 18:04:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4 --analysis_and_elaboration
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file de0_nano_soc_baseline.v
     Info (12023): Found entity 1: de0_nano_soc_baseline File: C:/Users/user/Desktop/Verilog/lab4/de0_nano_soc_baseline.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file transmiter.v
@@ -177,18 +199,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file uartclk
     Info (12023): Found entity 1: uartclk File: C:/Users/user/Desktop/Verilog/lab4/uartclk.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb.v
     Info (12023): Found entity 1: tb File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file uart.v
-    Info (12023): Found entity 1: uart File: C:/Users/user/Desktop/Verilog/lab4/uart.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at tb.v(18): created implicit net for "startTransmit" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at tb.v(18): created implicit net for "uart_packet" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 18
-Error (10137): Verilog HDL Procedural Assignment error at uart.v(14): object "startTransmit" on left-hand side of assignment must have a variable data type File: C:/Users/user/Desktop/Verilog/lab4/uart.v Line: 14
-Error (10231): Verilog HDL error at uart.v(14): value cannot be assigned to input "startTransmit" File: C:/Users/user/Desktop/Verilog/lab4/uart.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file uartpacketgenerator.v
+    Info (12023): Found entity 1: uartPacketGenerator File: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v Line: 1
+Info (12127): Elaborating entity "tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at tb.v(16): assignments to clk create a combinational loop File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 16
+Warning (10855): Verilog HDL warning at tb.v(23): initial value for variable btn should be constant File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 23
+Info (12128): Elaborating entity "uartclk" for hierarchy "uartclk:uc" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 18
+Info (12128): Elaborating entity "receiver" for hierarchy "receiver:rr" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 19
+Warning (10230): Verilog HDL assignment warning at receiver.v(32): truncated value with size 32 to match size of target (5) File: C:/Users/user/Desktop/Verilog/lab4/receiver.v Line: 32
+Info (12128): Elaborating entity "transmiter" for hierarchy "transmiter:tr" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 20
+Warning (10230): Verilog HDL assignment warning at transmiter.v(26): truncated value with size 32 to match size of target (8) File: C:/Users/user/Desktop/Verilog/lab4/transmiter.v Line: 26
+Info (12128): Elaborating entity "uartPacketGenerator" for hierarchy "uartPacketGenerator:gen" File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+Warning (10230): Verilog HDL assignment warning at uartPacketGenerator.v(53): truncated value with size 32 to match size of target (4) File: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v Line: 53
+Warning (10230): Verilog HDL assignment warning at uartPacketGenerator.v(56): truncated value with size 32 to match size of target (4) File: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v Line: 56
+Warning (10034): Output port "uart_packet[9]" at uartPacketGenerator.v(7) has no driver File: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v Line: 7
 Info (144001): Generated suppressed messages file C:/Users/user/Desktop/Verilog/lab4/output_files/lab4.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 3 warnings
-    Error: Peak virtual memory: 4766 megabytes
-    Error: Processing ended: Sat Nov 06 14:21:04 2021
-    Error: Elapsed time: 00:00:34
-    Error: Total CPU time (on all processors): 00:01:22
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Sun Dec 05 18:04:36 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +--------------------------------------------+

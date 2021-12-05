@@ -9,13 +9,16 @@ module tb;
 	reg [3:0] sw = 0;
 	
 	wire tx;
+	wire startTransmit,transmitFinished;
+	
+	wire [10:0] uart_packet;
 	
 	always #20 clk <= ~clk;
 	
 	uartclk uc(clk,uart_clock);
-	receiver rr(tx,clk,leds);
-	transmiter tr(clk,uart_clock,btn,sw);
-	uart ur(clk,startTransmit,uart_packet,tx);
+	receiver rr(tx,uart_clock,leds);
+	transmiter tr(uart_clock,startTransmit,uart_packet,transmitFinished,tx);
+	uartPacketGenerator gen(clk,btn,sw,transmitFinished,startTransmit,uart_packet);
 	
 	initial begin
 		#10;
