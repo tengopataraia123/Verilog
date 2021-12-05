@@ -5,7 +5,7 @@ module tb;
 	
 	wire [7:0] leds;
 	
-	reg [7:0] btn = 2'b11;
+	reg [1:0] btn = 2'b11;
 	reg [3:0] sw = 0;
 	
 	wire tx;
@@ -22,7 +22,7 @@ module tb;
 	
 	initial begin
 		#10;
-		sw = 4'b0000;
+		sw = 4'b0010;
 		#20;
 		btn[0] <= 0;
 		#20;

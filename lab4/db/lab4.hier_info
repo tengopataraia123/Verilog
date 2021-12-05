@@ -1,7 +1,96 @@
-|tb
+|de0_nano_soc_baseline
+CLOCK_50 => CLOCK_50.IN2
+FPGA_CLK2_50 => ~NO_FANOUT~
+FPGA_CLK3_50 => ~NO_FANOUT~
+GPIO_0[0] <> transmiter:tr.port4
+GPIO_0[1] <> receiver:rr.port0
+GPIO_0[2] <> <UNC>
+GPIO_0[3] <> <UNC>
+GPIO_0[4] <> <UNC>
+GPIO_0[5] <> <UNC>
+GPIO_0[6] <> <UNC>
+GPIO_0[7] <> <UNC>
+GPIO_0[8] <> <UNC>
+GPIO_0[9] <> <UNC>
+GPIO_0[10] <> <UNC>
+GPIO_0[11] <> <UNC>
+GPIO_0[12] <> <UNC>
+GPIO_0[13] <> <UNC>
+GPIO_0[14] <> <UNC>
+GPIO_0[15] <> <UNC>
+GPIO_0[16] <> <UNC>
+GPIO_0[17] <> <UNC>
+GPIO_0[18] <> <UNC>
+GPIO_0[19] <> <UNC>
+GPIO_0[20] <> <UNC>
+GPIO_0[21] <> <UNC>
+GPIO_0[22] <> <UNC>
+GPIO_0[23] <> <UNC>
+GPIO_0[24] <> <UNC>
+GPIO_0[25] <> <UNC>
+GPIO_0[26] <> <UNC>
+GPIO_0[27] <> <UNC>
+GPIO_0[28] <> <UNC>
+GPIO_0[29] <> <UNC>
+GPIO_0[30] <> <UNC>
+GPIO_0[31] <> <UNC>
+GPIO_0[32] <> <UNC>
+GPIO_0[33] <> <UNC>
+GPIO_0[34] <> <UNC>
+GPIO_0[35] <> <UNC>
+GPIO_1[0] <> <UNC>
+GPIO_1[1] <> <UNC>
+GPIO_1[2] <> <UNC>
+GPIO_1[3] <> <UNC>
+GPIO_1[4] <> <UNC>
+GPIO_1[5] <> <UNC>
+GPIO_1[6] <> <UNC>
+GPIO_1[7] <> <UNC>
+GPIO_1[8] <> <UNC>
+GPIO_1[9] <> <UNC>
+GPIO_1[10] <> <UNC>
+GPIO_1[11] <> <UNC>
+GPIO_1[12] <> <UNC>
+GPIO_1[13] <> <UNC>
+GPIO_1[14] <> <UNC>
+GPIO_1[15] <> <UNC>
+GPIO_1[16] <> <UNC>
+GPIO_1[17] <> <UNC>
+GPIO_1[18] <> <UNC>
+GPIO_1[19] <> <UNC>
+GPIO_1[20] <> <UNC>
+GPIO_1[21] <> <UNC>
+GPIO_1[22] <> <UNC>
+GPIO_1[23] <> <UNC>
+GPIO_1[24] <> <UNC>
+GPIO_1[25] <> <UNC>
+GPIO_1[26] <> <UNC>
+GPIO_1[27] <> <UNC>
+GPIO_1[28] <> <UNC>
+GPIO_1[29] <> <UNC>
+GPIO_1[30] <> <UNC>
+GPIO_1[31] <> <UNC>
+GPIO_1[32] <> <UNC>
+GPIO_1[33] <> <UNC>
+GPIO_1[34] <> <UNC>
+GPIO_1[35] <> <UNC>
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+LED[0] << receiver:rr.port2
+LED[1] << receiver:rr.port2
+LED[2] << receiver:rr.port2
+LED[3] << receiver:rr.port2
+LED[4] << receiver:rr.port2
+LED[5] << receiver:rr.port2
+LED[6] << receiver:rr.port2
+LED[7] << receiver:rr.port2
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
 
 
-|tb|uartclk:uc
+|de0_nano_soc_baseline|uartclk:uc
 clk => uart_clock~reg0.CLK
 clk => count[0].CLK
 clk => count[1].CLK
@@ -38,9 +127,17 @@ clk => count[31].CLK
 uart_clock <= uart_clock~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb|receiver:rr
+|de0_nano_soc_baseline|receiver:rr
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
+rx => data.DATAB
 rx => always0.IN1
-rx => data[0].DATAIN
 clk => leds[0]~reg0.CLK
 clk => leds[1]~reg0.CLK
 clk => leds[2]~reg0.CLK
@@ -64,6 +161,10 @@ clk => data[5].CLK
 clk => data[6].CLK
 clk => data[7].CLK
 clk => data[8].CLK
+clk => rCounter[0].CLK
+clk => rCounter[1].CLK
+clk => rCounter[2].CLK
+clk => rCounter[3].CLK
 clk => startReceiving.CLK
 leds[0] <= leds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[1] <= leds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -75,7 +176,7 @@ leds[6] <= leds[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 leds[7] <= leds[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb|transmiter:tr
+|de0_nano_soc_baseline|transmiter:tr
 uart_clock => uart_packet[0].CLK
 uart_clock => uart_packet[1].CLK
 uart_clock => uart_packet[2].CLK
@@ -87,6 +188,7 @@ uart_clock => uart_packet[7].CLK
 uart_clock => uart_packet[8].CLK
 uart_clock => uart_packet[9].CLK
 uart_clock => uart_packet[10].CLK
+uart_clock => tx~reg0.CLK
 uart_clock => transmitIndex[0].CLK
 uart_clock => transmitIndex[1].CLK
 uart_clock => transmitIndex[2].CLK
@@ -96,8 +198,6 @@ uart_clock => transmitIndex[5].CLK
 uart_clock => transmitIndex[6].CLK
 uart_clock => transmitIndex[7].CLK
 uart_clock => transmitFinished~reg0.CLK
-uart_clock => tx~reg0.CLK
-startTransmit => tx.OUTPUTSELECT
 startTransmit => uart_packet[0].ENA
 startTransmit => uart_packet[1].ENA
 startTransmit => uart_packet[2].ENA
@@ -109,6 +209,7 @@ startTransmit => uart_packet[7].ENA
 startTransmit => uart_packet[8].ENA
 startTransmit => uart_packet[9].ENA
 startTransmit => uart_packet[10].ENA
+startTransmit => tx~reg0.ENA
 startTransmit => transmitIndex[0].ENA
 startTransmit => transmitIndex[1].ENA
 startTransmit => transmitIndex[2].ENA
@@ -133,27 +234,29 @@ transmitFinished <= transmitFinished~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|tb|uartPacketGenerator:gen
-clk => parityIndex[0].CLK
-clk => parityIndex[1].CLK
-clk => parityIndex[2].CLK
-clk => parityIndex[3].CLK
+|de0_nano_soc_baseline|uartPacketGenerator:gen
+clk => startTransmit~reg0.CLK
 clk => bitCount[0].CLK
 clk => bitCount[1].CLK
 clk => bitCount[2].CLK
 clk => bitCount[3].CLK
-clk => startTransmit~reg0.CLK
-clk => uart_packet[10]~reg0.CLK
-clk => uart_packet[8]~reg0.CLK
-clk => uart_packet[7]~reg0.CLK
-clk => uart_packet[6]~reg0.CLK
-clk => uart_packet[5]~reg0.CLK
-clk => uart_packet[4]~reg0.CLK
-clk => uart_packet[3]~reg0.CLK
-clk => uart_packet[2]~reg0.CLK
-clk => uart_packet[1]~reg0.CLK
 clk => uart_packet[0]~reg0.CLK
+clk => uart_packet[1]~reg0.CLK
+clk => uart_packet[2]~reg0.CLK
+clk => uart_packet[3]~reg0.CLK
+clk => uart_packet[4]~reg0.CLK
+clk => uart_packet[5]~reg0.CLK
+clk => uart_packet[6]~reg0.CLK
+clk => uart_packet[7]~reg0.CLK
+clk => uart_packet[8]~reg0.CLK
+clk => uart_packet[9]~reg0.CLK
+clk => uart_packet[10]~reg0.CLK
+clk => readyForTransmit.CLK
 clk => startParityCheck.CLK
+clk => parityIndex[0].CLK
+clk => parityIndex[1].CLK
+clk => parityIndex[2].CLK
+clk => parityIndex[3].CLK
 clk => counter.CLK
 clk => data[0].CLK
 clk => data[1].CLK
@@ -179,16 +282,16 @@ sw[3] => data.DATAB
 sw[3] => data.DATAB
 transmitFinished => startTransmit.OUTPUTSELECT
 startTransmit <= startTransmit~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[10] <= uart_packet[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[9] <= <GND>
-uart_packet[8] <= uart_packet[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[7] <= uart_packet[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[6] <= uart_packet[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[5] <= uart_packet[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[4] <= uart_packet[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[3] <= uart_packet[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[2] <= uart_packet[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_packet[1] <= uart_packet[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 uart_packet[0] <= uart_packet[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[1] <= uart_packet[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[2] <= uart_packet[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[3] <= uart_packet[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[4] <= uart_packet[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[5] <= uart_packet[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[6] <= uart_packet[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[7] <= uart_packet[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[8] <= uart_packet[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[9] <= uart_packet[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_packet[10] <= uart_packet[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

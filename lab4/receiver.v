@@ -15,15 +15,16 @@ module receiver(
 	always@(posedge clk) begin
 		if(rx == 0 && startReceiving == 0) begin
 			startReceiving <= 1'b1;
-			rCounter <= 0;
+			rCounter <= 1;
 		end
 		
 		if(startReceiving == 1'b1 && rCounter != 9) begin
-			data[rCounter] <= rx;
+			data[rCounter-1] <= rx;
 			rCounter <= rCounter+1;
 		end
 		
 		if(rCounter == 9) begin
+			startReceiving <= 0;
 			startParityCheck <= 1'b1;
 		end
 		
@@ -43,8 +44,13 @@ module receiver(
 				leds <= data[7:0];
 			end
 			
+			rCounter <= 0;
 			startParityCheck <= 0;
 		end
+	end
+	
+	initial begin
+		leds = 0;
 	end
 	
 endmodule 

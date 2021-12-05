@@ -12,58 +12,58 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 {C:/Users/user/Desktop/Verilog/lab4/transmiter.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:06:11 on Dec 05,2021
+# Start time: 20:55:57 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
 # -- Compiling module transmiter
 # 
 # Top level modules:
 # 	transmiter
-# End time: 18:06:11 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 20:55:57 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 {C:/Users/user/Desktop/Verilog/lab4/receiver.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:06:12 on Dec 05,2021
+# Start time: 20:55:57 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
 # -- Compiling module receiver
 # 
 # Top level modules:
 # 	receiver
-# End time: 18:06:12 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 20:55:58 on Dec 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 {C:/Users/user/Desktop/Verilog/lab4/uartclk.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:06:12 on Dec 05,2021
+# Start time: 20:55:58 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartclk.v 
 # -- Compiling module uartclk
 # 
 # Top level modules:
 # 	uartclk
-# End time: 18:06:12 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 20:55:58 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 {C:/Users/user/Desktop/Verilog/lab4/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:06:12 on Dec 05,2021
+# Start time: 20:55:58 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 18:06:12 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 20:55:58 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 {C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:06:12 on Dec 05,2021
+# Start time: 20:55:58 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
 # -- Compiling module uartPacketGenerator
 # 
 # Top level modules:
 # 	uartPacketGenerator
-# End time: 18:06:12 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 20:55:58 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.tb
 # vsim work.tb 
-# Start time: 18:06:17 on Dec 05,2021
+# Start time: 20:56:02 on Dec 05,2021
 # Loading work.tb
 # Loading work.uartclk
 # Loading work.receiver
@@ -96,40 +96,24 @@ run
 run
 run
 run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:08:23 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
-# -- Compiling module uartPacketGenerator
+# Start time: 20:58:23 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
+# -- Compiling module receiver
 # 
 # Top level modules:
-# 	uartPacketGenerator
-# End time: 18:08:23 on Dec 05,2021, Elapsed time: 0:00:00
+# 	receiver
+# End time: 20:58:23 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.uartPacketGenerator
+# Loading work.receiver
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
 #    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:10:49 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/transmiter.v(22): (vlog-2730) Undefined variable: 'date'.
-# End time: 18:10:49 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+run -continue
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
@@ -138,60 +122,6 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:11:48 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/transmiter.v(22): (vlog-2730) Undefined variable: 'date'.
-# End time: 18:11:48 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:12:00 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:12:00 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:12:54 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:12:54 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
 run
 run
 run
@@ -214,13 +144,13 @@ run
 run
 vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:14:00 on Dec 05,2021
+# Start time: 21:00:46 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
 # -- Compiling module receiver
 # 
 # Top level modules:
 # 	receiver
-# End time: 18:14:00 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 21:00:46 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -247,325 +177,15 @@ run
 run
 run
 run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:17:40 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:17:40 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:19:41 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/transmiter.v(22): (vlog-2730) Undefined variable: 'rx'.
-# End time: 18:19:41 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:19:54 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:19:55 on Dec 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:23:17 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:23:17 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:26:28 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:26:28 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:27:27 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:27:27 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:28:10 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:28:10 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:36:07 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
-# -- Compiling module uartPacketGenerator
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(35): (vlog-3373) Range of part-select [0:7] into 'data' [7:0] is reversed.
-# End time: 18:36:07 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:37:22 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
-# -- Compiling module uartPacketGenerator
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(35): (vlog-3373) Range of part-select [8:1] into 'uart_packet' [0:10] is reversed.
-# End time: 18:37:22 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:18 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
-# -- Compiling module uartPacketGenerator
-# ** Error: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(35): (vlog-3373) Range of part-select [1:8] into 'uart_packet' [10:0] is reversed.
-# End time: 18:38:18 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:38:42 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
-# -- Compiling module uartPacketGenerator
-# 
-# Top level modules:
-# 	uartPacketGenerator
-# End time: 18:38:42 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.uartPacketGenerator
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/transmiter.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:39:48 on Dec 05,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/transmiter.v 
-# -- Compiling module transmiter
-# 
-# Top level modules:
-# 	transmiter
-# End time: 18:39:48 on Dec 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.transmiter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
 vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:46:28 on Dec 05,2021
+# Start time: 21:02:01 on Dec 05,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
 # -- Compiling module receiver
 # 
 # Top level modules:
 # 	receiver
-# End time: 18:46:28 on Dec 05,2021, Elapsed time: 0:00:00
+# End time: 21:02:01 on Dec 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -600,5 +220,513 @@ run
 run
 run
 run
-# End time: 18:46:45 on Dec 05,2021, Elapsed time: 0:40:28
-# Errors: 0, Warnings: 1
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartclk.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:03:05 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartclk.v 
+# -- Compiling module uartclk
+# 
+# Top level modules:
+# 	uartclk
+# End time: 21:03:05 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.uartclk
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:05:28 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
+# -- Compiling module receiver
+# 
+# Top level modules:
+# 	receiver
+# End time: 21:05:28 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.receiver
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:05:58 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
+# -- Compiling module receiver
+# 
+# Top level modules:
+# 	receiver
+# End time: 21:05:58 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.receiver
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:10:15 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
+# -- Compiling module uartPacketGenerator
+# 
+# Top level modules:
+# 	uartPacketGenerator
+# End time: 21:10:15 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.uartPacketGenerator
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:14:53 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:14:53 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:15:31 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
+# -- Compiling module uartPacketGenerator
+# 
+# Top level modules:
+# 	uartPacketGenerator
+# End time: 21:15:31 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.uartPacketGenerator
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:25:09 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
+# -- Compiling module uartPacketGenerator
+# 
+# Top level modules:
+# 	uartPacketGenerator
+# End time: 21:25:10 on Dec 05,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.uartPacketGenerator
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (8) for port 'btn'. The port definition is at: C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/gen File: C:/Users/user/Desktop/Verilog/lab4/tb.v Line: 21
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:27:59 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 21:27:59 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:29:09 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/uartPacketGenerator.v 
+# -- Compiling module uartPacketGenerator
+# 
+# Top level modules:
+# 	uartPacketGenerator
+# End time: 21:29:09 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.uartPacketGenerator
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab4 C:/Users/user/Desktop/Verilog/lab4/receiver.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:33:13 on Dec 05,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab4" C:/Users/user/Desktop/Verilog/lab4/receiver.v 
+# -- Compiling module receiver
+# 
+# Top level modules:
+# 	receiver
+# End time: 21:33:13 on Dec 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.receiver
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 21:33:31 on Dec 05,2021, Elapsed time: 0:37:29
+# Errors: 0, Warnings: 0

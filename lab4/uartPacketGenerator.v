@@ -14,6 +14,8 @@ module uartPacketGenerator(
 	reg [3:0] bitCount = 0;
 	reg [3:0] parityIndex = 0;
 	
+	reg readyForTransmit = 0;
+	
 	always@(posedge clk) begin
 		
 		oldBtn[1:0] <= btn[1:0];
@@ -28,24 +30,26 @@ module uartPacketGenerator(
 			end
 		end
 		
-		if(oldBtn[1] != btn[1]) begin
+		if(oldBtn[1] != btn[1] && counter == 1'b1) begin
 			//start transmit
+			parityIndex <= 0;
 			startParityCheck <= 1'b1;
+			readyForTransmit <= 0;
 			uart_packet[0] <= 0;
 			uart_packet[8:1] <= data;
 			uart_packet[10] <= 1'b1;
-			
+			counter <= 0;
 		end
 		
 		if(startParityCheck == 1'b1) begin
 			if(parityIndex == 8) begin
 				startParityCheck <= 0;
-				startTransmit <= 1'b1;
+				readyForTransmit <= 1'b1;
 				if(bitCount%2 == 0) begin
-					uart_packet[9] <= 1;
+					uart_packet[9] <= 0;
 				end
 				else begin
-					uart_packet[9] <= 0;
+					uart_packet[9] <= 1;
 				end
 			end
 			else begin
@@ -53,12 +57,17 @@ module uartPacketGenerator(
 					bitCount = bitCount + 1;
 				end
 			end
-			parityIndex = parityIndex + 1;
+			parityIndex <= parityIndex + 1;
+		end
+		
+		if(readyForTransmit == 1'b1)begin
+			startTransmit <= 1'b1;
 		end
 
 		if(transmitFinished == 1'b1) begin
 			startTransmit <= 0;
 		end
+
 		
 	end
 

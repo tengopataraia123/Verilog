@@ -6,10 +6,12 @@ module uartclk(
 	
 	always@(posedge clk) begin
 		count <= count + 1;
-		uart_clock <= 0;
-		if(count == 2) begin
+		if(count == 50000) begin
 			count <= 0;
-			uart_clock <= 1;
+			uart_clock <= 1'b1;
+		end
+		if(count == 25000) begin
+			uart_clock <= 0;
 		end
 	end
 	
