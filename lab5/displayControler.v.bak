@@ -1,0 +1,5 @@
+module diplayControler(
+	input number1,number2,number3,number4,
+	output anode1,anode2,anode3,anode4,
+	output A,B,C,D,E,F,G
+);	

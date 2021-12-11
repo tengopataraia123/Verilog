@@ -1,0 +1,197 @@
+# Reading pref.tcl
+# do lab5_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 {C:/Users/user/Desktop/Verilog/lab5/counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:29:14 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/counter.v 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 20:29:14 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 {C:/Users/user/Desktop/Verilog/lab5/displayControler.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:29:14 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/displayControler.v 
+# -- Compiling module diplayControler
+# 
+# Top level modules:
+# 	diplayControler
+# End time: 20:29:14 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 {C:/Users/user/Desktop/Verilog/lab5/numParser.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:29:14 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/numParser.v 
+# -- Compiling module numParser
+# 
+# Top level modules:
+# 	numParser
+# End time: 20:29:14 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 {C:/Users/user/Desktop/Verilog/lab5/tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:29:14 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 20:29:15 on Dec 11,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb
+# vsim work.tb 
+# Start time: 20:29:21 on Dec 11,2021
+# Loading work.tb
+# Loading work.counter
+# Loading work.diplayControler
+# Loading work.numParser
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+add wave -position end sim:/tb/*
+restart
+run
+run
+run
+run
+run
+run
+add wave -position end sim:/tb/cnt/*
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 C:/Users/user/Desktop/Verilog/lab5/counter.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:10 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/counter.v 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 20:32:10 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.counter
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 C:/Users/user/Desktop/Verilog/lab5/tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:41 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 20:32:41 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/displayControler.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/display File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number1'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number2'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number3'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'number4'. The port definition is at: C:/Users/user/Desktop/Verilog/lab5/numParser.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/parser File: C:/Users/user/Desktop/Verilog/lab5/tb.v Line: 15
+run
+run
+run
+run
+vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Verilog/lab5 C:/Users/user/Desktop/Verilog/lab5/tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:33:27 on Dec 11,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Verilog/lab5" C:/Users/user/Desktop/Verilog/lab5/tb.v 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 20:33:27 on Dec 11,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 20:34:30 on Dec 11,2021, Elapsed time: 0:05:09
+# Errors: 0, Warnings: 0

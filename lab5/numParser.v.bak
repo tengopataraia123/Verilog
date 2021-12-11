@@ -1,0 +1,10 @@
+module numParser(
+	input [0:14] number,
+	output [0:3] numbers[0:1]
+	);
+	
+	assign numbers[0] = number % 10;
+	assign numbers[1] = (number / 10) % 10;
+	assign numbers[2] = (number / 100) % 10;
+	assign numbers[3] = number / 1000
+endmodule 

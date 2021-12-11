@@ -1,0 +1,15 @@
+module counter(
+	input clk,
+	output [0:14] number);
+	
+	integer clkCount = 0;
+	integer count = 0;
+	
+	assign number = count;
+	
+	always@(posedge clk) begin
+	
+	end
+
+	
+endmodule 
