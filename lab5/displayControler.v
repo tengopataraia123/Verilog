@@ -49,16 +49,70 @@ module diplayControler(
 		
 		case(number)
 			0: begin
-				A <= 1;
-				B <= 1;
-				C <= 1;
-				D <= 1;
-				E <= 1;
-				F <= 1;
-				G <= 0;
+				A <= 0;
+				B <= 0;
+				C <= 0;
+				D <= 0;
+				E <= 0;
+				F <= 0;
+				G <= 1;
 			end
 			1: begin
+				A <= 1;
+				B <= 0;
+				C <= 0;
+				D <= 1;
+				E <= 1;
+				F <= 1;
+				G <= 1;
+			end
+			2: begin
 				A <= 0;
+				B <= 0;
+				C <= 1;
+				D <= 0;
+				E <= 0;
+				F <= 1;
+				G <= 0;
+			end
+			3: begin
+				A <= 0;
+				B <= 0;
+				C <= 0;
+				D <= 0;
+				E <= 1;
+				F <= 1;
+				G <= 0;
+			end
+			4: begin
+				A <= 1;
+				B <= 0;
+				C <= 0;
+				D <= 1;
+				E <= 1;
+				F <= 0;
+				G <= 0;
+			end
+			5: begin
+				A <= 0;
+				B <= 0;
+				C <= 1;
+				D <= 0;
+				E <= 0;
+				F <= 1;
+				G <= 0;
+			end
+			6: begin
+				A <= 0;
+				B <= 1;
+				C <= 0;
+				D <= 0;
+				E <= 0;
+				F <= 0;
+				G <= 0;
+			end
+			7: begin
+				A <= 1;
 				B <= 1;
 				C <= 1;
 				D <= 0;
@@ -66,58 +120,10 @@ module diplayControler(
 				F <= 0;
 				G <= 0;
 			end
-			2: begin
-				A <= 1;
-				B <= 1;
-				C <= 0;
-				D <= 1;
-				E <= 1;
-				F <= 0;
-				G <= 1;
-			end
-			3: begin
-				A <= 1;
-				B <= 1;
-				C <= 1;
-				D <= 1;
-				E <= 0;
-				F <= 0;
-				G <= 1;
-			end
-			4: begin
-				A <= 0;
-				B <= 1;
-				C <= 1;
-				D <= 0;
-				E <= 0;
-				F <= 1;
-				G <= 1;
-			end
-			5: begin
-				A <= 1;
-				B <= 1;
-				C <= 0;
-				D <= 1;
-				E <= 1;
-				F <= 0;
-				G <= 1;
-			end
-			6: begin
-				A <= 1;
-				B <= 0;
-				C <= 1;
-				D <= 1;
-				E <= 1;
-				F <= 1;
-				G <= 1;
-			end
-			7: begin
-			
-			end
 			8: begin
-				A <= 1;
-				B <= 1;
-				C <= 1;
+				A <= 0;
+				B <= 0;
+				C <= 0;
 				D <= 0;
 				E <= 0;
 				F <= 0;
@@ -133,13 +139,13 @@ module diplayControler(
 				G <= 1;
 			end
 			default: begin
-				A <= 0;
-				B <= 0;
-				C <= 0;
-				D <= 0;
-				E <= 0;
-				F <= 0;
-				G <= 0;
+				A <= 1;
+				B <= 1;
+				C <= 1;
+				D <= 1;
+				E <= 1;
+				F <= 1;
+				G <= 1;
 			end
 		endcase
 		
