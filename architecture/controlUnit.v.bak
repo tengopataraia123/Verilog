@@ -1,0 +1,11 @@
+module controlUnit(
+	input clk
+);
+
+	always@(posedge clk) begin
+	
+		
+	
+	end
+
+endmodule 
